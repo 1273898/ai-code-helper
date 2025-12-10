@@ -3,6 +3,8 @@ spring:
     name: ai-code
   profiles:
     active: local
+
+
 langchain4j:
   community:
     dashscope:

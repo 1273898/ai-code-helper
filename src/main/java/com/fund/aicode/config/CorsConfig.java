@@ -1,4 +1,4 @@
-package com.fund.aicode.ai.config;
+package com.fund.aicode.config;
 
 
 import org.springframework.context.annotation.Configuration;

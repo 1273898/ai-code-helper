@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 编程小助手</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- 顶部标题栏 -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">
+                    <span class="title-icon">🤖</span>
+                    AI 编程小助手
+                </h1>
+                <div class="header-info">
+                    <span class="chat-id-label">会话ID:</span>
+                    <span id="chatId" class="chat-id"></span>
+                    <button id="resetBtn" class="reset-btn" title="新建会话">🔄</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- 聊天消息区域 -->
+        <main class="chat-container" id="chatContainer">
+            <div class="chat-placeholder" id="chatPlaceholder">
+                <div class="placeholder-content">
+                    <div class="placeholder-icon">💬</div>
+                    <h2>欢迎使用 AI 编程小助手</h2>
+                    <p>我可以帮助您：</p>
+                    <ul class="feature-list">
+                        <li>📚 解答编程学习和算法问题</li>
+                        <li>💼 模拟技术面试，提升实战表现</li>
+                        <li>🔍 代码审查与优化建议</li>
+                        <li>📖 学习路线规划</li>
+                    </ul>
+                    <div class="quick-questions">
+                        <p class="quick-title">快速开始：</p>
+                        <div class="quick-chips">
+                            <button class="chip" data-text="什么是 Spring Boot？">什么是 Spring Boot？</button>
+                            <button class="chip" data-text="如何优化 SQL 查询性能？">如何优化 SQL 查询性能？</button>
+                            <button class="chip" data-text="Java 中的 HashMap 原理是什么？">Java 中的 HashMap 原理是什么？</button>
+                            <button class="chip" data-text="请给我一个技术面试题">请给我一个技术面试题</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- 输入区域 -->
+        <footer class="input-container">
+            <div class="input-wrapper">
+                <textarea 
+                    id="messageInput" 
+                    class="message-input" 
+                    placeholder="输入您的问题，按 Enter 发送，Shift+Enter 换行..."
+                    rows="1"
+                ></textarea>
+                <button id="sendBtn" class="send-btn" disabled>
+                    <span class="send-icon">📤</span>
+                    <span class="send-text">发送</span>
+                </button>
+            </div>
+            <div class="status-bar">
+                <span id="statusText" class="status-text">就绪</span>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 加载动画 -->
+    <div id="loadingOverlay" class="loading-overlay" style="display: none;">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
